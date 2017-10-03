@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<br>
+
+<center>
+
+<h1>List of all Tweets</h1>
+
+<h2>Random Tweet: <%= @random_tweet_body %></h2>
+
+
+<% @tweets.each do |tweet| %>
+<div class="jumbotron" style="max-width: 500px">
+    <p><%= tweet.body %></p>
+    <h5>Posted by <%= tweet.user %></h5>
+    <%= link_to 'Show', tweet, class: "btn btn-primary btn-sm" %>
+    <%= link_to 'Edit', edit_tweet_path(tweet), class: "btn btn-primary btn-sm" %>
+    <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-primary btn-sm"%>
+</div>
+<% end %>
+</center>
+
+<br>
+
+<%= link_to 'New Tweet', new_tweet_path %>
