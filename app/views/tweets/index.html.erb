@@ -10,9 +10,9 @@
 <div class="jumbotron" style="max-width: 500px">
     <p><%= tweet.body %></p>
     <h5>Posted by <%= tweet.user %></h5>
-    <%= link_to 'Show', tweet, class: "btn btn-primary btn-sm" %>
+    <%= link_to 'Show', tweet, class: "btn btn-default btn-sm" %>
     <%= link_to 'Edit', edit_tweet_path(tweet), class: "btn btn-primary btn-sm" %>
-    <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-primary btn-sm"%>
+    <%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-danger btn-sm"%>
 </div>
 <% end %>
 </center>
