@@ -6,7 +6,6 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all
     
-    @random_tweet_body = @tweets.sample.body
   end
 
   # GET /tweets/1
